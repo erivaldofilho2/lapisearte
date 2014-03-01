@@ -20,13 +20,13 @@ import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
 
 public class CriaPDF {
 
-	public void criarDeclaracao(Aluno aluno) {
+	public void criarDeclaracao(Aluno aluno,String diretorio) {
 
 		Document pdf = new Document(PageSize.A4);
 		FileOutputStream os = null;
 		try {
 
-			os = new FileOutputStream("/home/erivaldo/"+aluno.getNome()+".pdf");
+			os = new FileOutputStream(diretorio+".pdf");
 			PdfWriter.getInstance(pdf, os);
 			pdf.open();
 			// pdf.addHeader("teste", "teste");

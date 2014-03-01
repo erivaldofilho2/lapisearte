@@ -20,7 +20,7 @@
 			<div class="menu_esquerda">
 		
 		<a href="#">Editar</a>
-		<a href="#">Declaracao</a>
+		<a href="alunocontrole.do?acao=decl">Declaracao</a>
 		<a href="#">Historico</a>
 		<a href="#">Ficha</a>
 		<a href="#">Excluir</a>

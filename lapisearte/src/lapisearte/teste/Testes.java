@@ -1,8 +1,13 @@
 package lapisearte.teste;
 
+import java.awt.Dialog;
+import java.awt.FileDialog;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import javax.swing.JTextField;
 
 import lapisearte.DAO.AlunoDAO;
 import lapisearte.DAO.EnderecoDAO;
@@ -29,9 +34,9 @@ public class Testes {
 
 //
 		AlunoDAO aluDAO = new AlunoDAO();
-//
+
 		ArrayList<Aluno> lista = aluDAO.buscaPorNome("Ju");
-//
+
 		for (Aluno aluno : lista) {
 
 			System.out.println("ID: " + aluno.getId() + "\nNome: "
@@ -39,18 +44,21 @@ public class Testes {
 					+ aluno.getDataNascimento() + "\n\n");
 
 		}
-//
-//		CriaPDF pdf = new CriaPDF();
-//
-//		pdf.criarDeclaracao(lista.get(7));
-//
+		FileDialog salvararq = null;
+		
+		salvararq = new FileDialog(new Dialog(salvararq),"Salvando arquivo",FileDialog.SAVE);
+		salvararq.setVisible(true);
+		
+		CriaPDF pdf = new CriaPDF();
+
+		pdf.criarDeclaracao(lista.get(2),salvararq.getDirectory()+lista.get(2).getNome());
+
 //		Endereco endereco = new Endereco("Rua da minha casa",
 //				"Bairro da minha casa", 57061606, "Mcidade", "ME",
 //				"Proximo a minha casa");
 //		Aluno aluno = new Aluno("Figueira da Silva", "M", data, endereco, null,
 //				null);
 //		aluDAO.inserir(aluno);
-		
-		
+
 	}
 }
