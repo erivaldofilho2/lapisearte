@@ -1,0 +1,70 @@
+#area
+{
+	position:relative;
+	left:37%;
+	top:10em;
+	width:320px;
+	height:270px;
+}
+#area #formulario
+{
+	position:absolute;
+	display:block;	 
+}
+fieldset
+{
+	padding-top:0px;
+	background-size:340px 240px;
+	background-color:#A7C0DC;
+	width:340px;
+	height:250px;
+}
+#formulario legend
+{
+	padding-top:0px;
+    position:absolute;
+	top:-9px;
+	font-weight:bold;
+	font-family: "Segoe UI","Arial","Times New Roman";
+}
+#formulario label
+{
+	position:absolute;
+	left:22px;
+	margin-right:5px;
+	margin-top:21px;
+	line-height:22px;
+	
+}
+#formulario input.campo_nome
+{
+	background-color:#f1ff00;
+	position:absolute;
+	left:96px;
+ 	top:17px;
+	width:225px;
+}
+#formulario input.campo_email
+{	
+	background-color:#f1ff00;
+	position:absolute;
+	left:96px;
+	margin-top:24px;
+	width:225px;
+}
+#formulario textarea.msg
+{
+	position:absolute;
+	left:1.5em;
+	bottom:40px;
+	background-color:#f1ff00;
+}
+#formulario input.btn_submit
+{
+	border-style:dashed;
+	color:#fff;
+	position:absolute;
+	bottom: 0.9em;
+	left:263px;
+	background-color:#f1ff00;;
+}

@@ -1,0 +1,293 @@
+@CHARSET "UTF-8";
+
+h1, h2, h3 {
+	margin: 0px; 
+	padding: 0px;
+	color: #000000;
+	text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+body {
+	font-family: arial, verdana, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+	color:#474747;
+}
+
+select {
+	font-size: 12px;
+}
+
+fieldset {
+	border: 1px solid #D0D0D0;
+}
+
+legend {
+	align: center;
+	font-size: 11px;
+}
+
+.form {background-color: #E3DDC6; min-width:400px;}		
+.form label {width: 180px; text-align: right; margin-right: 5px; float: left; font-size: 13px;}
+.form input, select {margin-bottom: 7px; display: block;}
+.form .title {font-size: 18px;}
+.form .section {border-bottom: 0px; border-left: 0px; border-right: 0px; background-color: #EBEBEB;}
+.form .section legend {font-size: 15px;}
+.form .buttons {border-bottom: 0px; border-left: 0px; border-right: 0px; text-align: right; margin-bottom: 0px; padding-bottom: 0px;}
+.form .button {display: inline;}
+.form .large {width: 400px;}
+.form .medium {width: 250px;}
+.form .small {width: 100px;}
+.form .mini {width: 50px;}
+
+#cabecalho {
+	height: 75px;
+	vertical-align: middle;
+	background-image: url("../images/bg_topo.jpg");
+	background-repeat:repeat-x;
+	margin: 0 0 0 0;
+	padding: 0px 10px;
+	color: #fff;
+}
+
+#cabecalho h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#cabecalho a {
+	color: #fff;
+}
+
+#titulo p {
+	margin-top: 5px;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+#menu {
+	margin: 0px 0px;
+}
+
+#conteudo {
+	margin: 10px 10px;
+}
+
+#conteudo_centralizado {
+	margin: 10px auto;
+	width: 980px;
+}
+
+.limit {
+  margin: 20 auto;
+  max-width: 1680px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#content-side-wrap {
+    border-radius: 5px 0 0 5px;
+    float: left;
+    left: 85%;
+    position: relative;
+    width: 100%;
+}
+
+#avisos {
+    float: left;
+    padding: 1em 0;
+    position: relative;
+    right: 85%;
+    width: 85%;
+}
+
+#avisos-wrap {
+    padding: 0 0.5em;
+}
+
+#avisos-wrap h2 {
+    color: #17414C;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 2em;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+#sidebar {
+    float: left;
+    padding: 1em 0;
+    position: relative;
+    right: 85%;
+    width: 15%;
+}
+
+#sidebar h2 {
+    color: #17414C;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 2em;
+    margin-bottom: 4px;
+    padding-left: 10px;
+    text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+#sidebar ul {
+    margin: 0 0 2em;
+    list-style: none outside none;
+    padding: 0 0 0 0;
+}
+
+#sidebar .links a:link, #sidebar .links a:visited {
+    border-radius: 0 1em 1em 0;
+	color: blue;
+	display: block;
+	font-size: 1.3em;
+	line-height: 2em;
+	margin: 0 0 0 0;
+	padding: 0 10px;
+	text-decoration: underline;
+}
+
+#sidebar .links a:active, #sidebar .links a:hover {
+    background: none repeat scroll 0 0 #CCCCCC;
+    text-decoration: underline;
+}
+
+#sidebar p {
+    margin: 0;
+    padding-left: 10px;
+}
+
+#sidebar form {
+    margin: 0;
+    padding-left: 10px;
+}
+
+#rodape {
+	background-image: url("../images/rodapeBackground.gif");
+	background-position: center top;
+	background-repeat: repeat-x;
+	border-top: 1px solid #DDDDDD;
+	font-size: 11px;
+	margin-top: 40px;
+	padding: 20px 5px 50px;
+	text-align: center; 
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 550px;
+	text-align: center;
+}
+
+#rodape .container {
+	text-align: right;
+	width:100%;
+}
+
+.error {
+	color: red;
+}
+
+.gridH  {background-color:#003366; color: #ffffff}
+.grid  {background-color:#E3DDC6}
+
+.message {
+	padding: 5px;
+	list-style: none;
+	border: 0;
+	background: none;
+	padding: 0;
+	color: #000000;
+	margin: 5px 0 8px 0;
+	font-size: 12px;
+}
+
+.message li {
+	background: no-repeat left center;
+	padding-top: 1px;
+	padding-left: 30px;
+	margin-left: 3px;
+}
+
+.message li.infomsg {
+	background-image: url(../images/msginfo.png);
+}
+
+.message li.errormsg {
+	background-image: url(../images/msgerror.png);
+}
+
+.message li.warnmsg {
+	background-image: url(../images/msgwarn.png);
+}
+
+.mensagemWarn {
+	color: #222222;
+	padding: 4px;
+	text-align: left;
+}
+
+.mensagemInfo {
+	color: #008000;
+	padding: 4px;
+	text-align: left;
+}
+
+.mensagemErro {
+	color: #CC0000;
+	padding: 4px;
+	text-align: left;
+}
+
+.mensagemFatal {
+	color: #CC0000;
+	padding: 4px;
+	text-align: left;
+}
+
+.preferencias a {
+	line-height: 2em;
+}
+
+.ajuda h2 {
+	border-bottom: 1px solid #CCCCCC;
+	font-size: 1.3em;
+	margin: 1em 0;
+	padding: 0 0 0.2em;
+	text-align: left;
+}
+
+.botaoPrincipal {
+	font-weight: bold;
+}
+
+.even {
+	background-color:#FFFFFF;
+}
+
+.odd {
+	background-color:#f8f8f8;
+}
+
+.calendar-input {
+	width: 80px;
+}
+
+.icon-reports {
+    background: url("../images/report.gif") no-repeat scroll 0px -1px transparent;
+    padding-left: 1.8em;
+}
+
+.icon-help {
+    background: url("../images/help.png") no-repeat scroll 0px -1px transparent;
+    padding-left: 1.8em;
+}
+
+.icon-print {
+    background: url("../images/printer.png") no-repeat scroll 0px -1px transparent;
+    padding-left: 1.8em;
+}
