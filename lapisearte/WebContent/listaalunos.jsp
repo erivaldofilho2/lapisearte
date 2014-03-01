@@ -8,6 +8,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/estilo2.css">
+		<script src="js/script.js" type="text/javascript"></script>
 		<title>Lista Alunos</title>
 	</head>
 	<body>
@@ -16,9 +17,9 @@
 	
 		<div class="centro">
 
-			<input type="text"  name="txtBusca" />
+			<input type="text"  name="txtBusca" id="valor" />
 <!-- 			<a href="alunocontrole.do?acao=buscar">buscar</a> -->
-			<input type="button" onclick="index.html" value="Buscar" />
+			<input type="button" onclick="pesquisa();" value="Buscar" />
 			
 			<table class="lista">
 				<tr bgcolor="#CCCCCC">

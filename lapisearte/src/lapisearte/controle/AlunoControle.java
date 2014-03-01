@@ -43,7 +43,7 @@ public class AlunoControle extends HttpServlet {
 			saida.forward(request, response);
 			System.out.println("Enviado os dados do aluno!!");
 
-		} else if(acao != null && acao.equals("listar")) {
+		} else if (acao != null && acao.equals("listar")) {
 
 			// 1 - obter a lista
 			ArrayList<Aluno> lista = aluDao.buscarTodos();
@@ -57,48 +57,46 @@ public class AlunoControle extends HttpServlet {
 					.getRequestDispatcher("listaalunos.jsp");
 
 			saida.forward(request, response);
-		}
-		else if(acao != null && acao.equals("buscar")) {
-			
-						String nome = request.getParameter("txtBusca");
-						System.out.println("Nome = " + nome);
+		} else if (acao != null && acao.equals("buscar")) {
+
+			String nome = request.getParameter("nome");
+			System.out.println("Nome = " + nome);
 			// 1 - obter a lista
-						ArrayList<Aluno> lista = aluDao.buscaPorNome(nome);
-						// 2 - colocar lista no request
+			ArrayList<Aluno> lista = aluDao.buscaPorNome(nome);
+			// 2 - colocar lista no request
 
-						request.setAttribute("lista", lista);
+			request.setAttribute("lista", lista);
 
-						// encaminhamento ao JSP
+			// encaminhamento ao JSP
 
-						RequestDispatcher saida = request
-								.getRequestDispatcher("listaalunos.jsp");
+			RequestDispatcher saida = request
+					.getRequestDispatcher("listaalunos.jsp");
 
-						saida.forward(request, response);
-			
-			
-			
-		}else if (acao != null && acao.equals("decl")) {
-			
-			FileDialog salvararq = null;
-			
-			salvararq = new FileDialog(new Dialog(salvararq),"Salvando arquivo",FileDialog.SAVE);
-			salvararq.setVisible(true);
-			
-			
-			
-			
-			CriaPDF pdf = new CriaPDF();
+			saida.forward(request, response);
 
-			pdf.criarDeclaracao(aluDao.buscaPorId(22),salvararq.getDirectory()+aluDao.buscaPorId(22).getNome());
-
-			
-			
+		} else if (acao != null && acao.equals("decl")) {
+			// System.out.println("1");
+			// FileDialog salvararq = null;
+			// System.out.println("2");
+			// salvararq = new FileDialog(new Dialog(salvararq),
+			// "Salvando arquivo", FileDialog.SAVE);
+			// System.out.println("3");
+			// salvararq.setVisible(true);
+			// System.out.println("4");
+			// CriaPDF pdf = new CriaPDF();
+			// System.out.println("5");
+			// System.out.println(salvararq.getDirectory());
+			//
+			// pdf.criarDeclaracao(aluDao.buscaPorId(22),
+			// salvararq.getDirectory()
+			// + aluDao.buscaPorId(22).getNome());
+			// System.out.println("6");
 		}
 	}
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
+
 		System.out.println("Chamando metodo Post");
 		// tratamento da data
 		String s = request.getParameter("dateData");
@@ -111,8 +109,8 @@ public class AlunoControle extends HttpServlet {
 		java.sql.Date data2 = new java.sql.Date(calendar.getTimeInMillis());
 
 		Endereco endereco = new Endereco(request.getParameter("txtEndereco"),
-				request.getParameter("txtBairro"),
-				Integer.parseInt(request.getParameter("txtCEP")),
+				request.getParameter("txtBairro"), Integer.parseInt(request
+						.getParameter("txtCEP")),
 				request.getParameter("txtCidade"),
 				request.getParameter("txtUF"),
 				request.getParameter("txtComplemento"));
@@ -128,5 +126,5 @@ public class AlunoControle extends HttpServlet {
 		saida.println("Aluno: " + request.getParameter("txtNome")
 				+ ", cadastrador com sucesso!");
 	}
-	
+
 }

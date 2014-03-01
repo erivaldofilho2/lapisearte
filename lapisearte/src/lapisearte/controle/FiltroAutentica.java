@@ -42,7 +42,7 @@ public class FiltroAutentica implements Filter {
 				|| url.lastIndexOf("autcontrole.do") > -1
 				|| url.lastIndexOf("css/estilo2.css")>-1
 				|| url.lastIndexOf("img")>-1) {
-
+			System.out.println("NAO FOI BARRADO");
 			chain.doFilter(request, response);// permite o fluxo
 		} else {
 			// redireciona para login

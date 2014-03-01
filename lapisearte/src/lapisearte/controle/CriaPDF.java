@@ -19,14 +19,20 @@ import com.itextpdf.text.pdf.PdfWriter;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
 
 public class CriaPDF {
-
+	
+	public CriaPDF(){
+		System.out.println("criou Criar PDF");
+	}
+	
 	public void criarDeclaracao(Aluno aluno,String diretorio) {
-
+		System.out.println("entrou na funcao");
 		Document pdf = new Document(PageSize.A4);
+		System.out.println("criou o pdf");
 		FileOutputStream os = null;
 		try {
-
+			
 			os = new FileOutputStream(diretorio+".pdf");
+			System.out.println("Criou arquivo");
 			PdfWriter.getInstance(pdf, os);
 			pdf.open();
 			// pdf.addHeader("teste", "teste");

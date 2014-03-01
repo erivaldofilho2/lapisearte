@@ -64,4 +64,11 @@ function calendario() {
 	calendario += '</td></tr></table>';
 	document.getElementById("calendario").tagName = calendario ;
 	alert(calendario);
-}	
+}
+
+function pesquisa(){
+	
+	var valor =  document.getElementById("valor").value;
+	location.href="alunocontrole.do?acao=buscar&nome="+valor;
+
+}
