@@ -20,10 +20,9 @@
 					<ul>
 						<li><a href="#">Aluno</a>
 							<ul>
-								<li><a href="alunocontrole.do?acao=listar">listar</a>
 								
-								<li><a href="cadastroaluno.jsp">cadastrar</a>
-								
+								<li><a href="cadastroaluno.jsp">Cadastrar</a>
+								<li><a href="alunocontrole.do?acao=listar">Listar</a>								
 								<li><a href="#">opcao 3</a>
 							
 							</ul>
@@ -33,10 +32,8 @@
 					<ul>
 						<li><a href="#">Professor</a>
 							<ul>
-								<li><a href="#">opcao 1</a>
-								
-								<li><a href="#">opcao 2</a>
-								
+								<li><a href="#">Cadastrar</a>
+								<li><a href="#">Listar</a>
 								<li><a href="#">opcao 3</a>
 							
 							</ul>
@@ -45,10 +42,8 @@
 					<ul>
 						<li><a href="#">Turma</a>
 							<ul>
-								<li><a href="#">opcao 1</a>
-								
-								<li><a href="#">opcao 2</a>
-								
+								<li><a href="cadastroturma.jsp">Cadastrar</a>
+								<li><a href="#">Listar</a>
 								<li><a href="#">opcao 3</a>
 							
 							</ul>
