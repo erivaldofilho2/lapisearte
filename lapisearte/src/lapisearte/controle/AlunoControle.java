@@ -1,16 +1,23 @@
 package lapisearte.controle;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 
 import lapisearte.DAO.AlunoDAO;
 import lapisearte.entidade.Aluno;
@@ -73,13 +80,39 @@ public class AlunoControle extends HttpServlet {
 			saida.forward(request, response);
 
 		} else if (acao != null && acao.equals("decl")) {
-			
-			CriaPDF pdf = new CriaPDF();
-			
-			pdf.criarDeclaracao(aluDao.buscaPorId(Integer.parseInt(request.getParameter("id"))));
 
-			 
-			 
+			CriaPDF pdf = new CriaPDF();
+
+			pdf.criarDeclaracao(aluDao.buscaPorId(Integer.parseInt(request
+					.getParameter("id"))));
+
+			String local = "/home/erivaldo/git/lapisearte/lapisearte/WebContent/arquivos/"
+					+ aluDao.buscaPorId(
+							Integer.parseInt(request.getParameter("id")))
+							.getId() + ".pdf";
+
+			File arqiovoPdf = new File(local);
+
+			response.setContentType("application/pdf");
+			response.setHeader("Content-Disposition", "atachment; filename=\""
+					+ "aluno_" + request.getParameter("id"));
+			response.setContentLength((int) arqiovoPdf.length());
+
+			ServletOutputStream servletOutputSream = response.getOutputStream();
+			BufferedInputStream bufferdInputStream = new BufferedInputStream(
+					new FileInputStream(arqiovoPdf));
+
+			int bytesRead = bufferdInputStream.read();
+
+			while (bytesRead != -1) {
+				servletOutputSream.write(bytesRead);
+				bytesRead = bufferdInputStream.read();
+			}
+			if (servletOutputSream != null)
+				servletOutputSream.close();
+			if (bufferdInputStream != null)
+				bufferdInputStream.close();
+
 		}
 	}
 

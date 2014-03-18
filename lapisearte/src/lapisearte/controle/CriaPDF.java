@@ -32,14 +32,14 @@ public class CriaPDF {
 		FileOutputStream os = null;
 		try {
 			
-			os = new FileOutputStream(aluno.getId()+".pdf");
+			os = new FileOutputStream("/home/erivaldo/git/lapisearte/lapisearte/WebContent/arquivos/"+aluno.getId()+".pdf");
 			System.out.println("Criou arquivo");
 			PdfWriter.getInstance(pdf, os);
 			pdf.open();
 			// pdf.addHeader("teste", "teste");
 
 			Image logo = Image
-					.getInstance("/home/erivaldo/SistemaLapisEArte/logo.png");
+					.getInstance("/home/erivaldo/git/lapisearte/lapisearte/WebContent/img/logo.png");
 			logo.setAlignment(Element.ALIGN_CENTER);
 			logo.scaleAbsolute(75, 75);
 			pdf.add(logo);

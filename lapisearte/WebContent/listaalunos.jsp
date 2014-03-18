@@ -19,7 +19,7 @@
 
 			<input type="text"  name="txtBusca" id="valor" />
 <!-- 			<a href="alunocontrole.do?acao=buscar">buscar</a> -->
-			<input type="button" onclick="pesquisa();" value="Buscar" />
+			<input type="submit" onkeypress="pesquisa();" onclick="pesquisa();" value="Buscar" />
 			
 			<table class="lista">
 				<tr bgcolor="#CCCCCC">
