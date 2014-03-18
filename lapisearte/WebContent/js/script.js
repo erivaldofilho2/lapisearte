@@ -72,3 +72,17 @@ function pesquisa(){
 	location.href="alunocontrole.do?acao=buscar&nome="+valor;
 
 }
+function matricular(id){
+
+	
+	for ( i = 1; i <= 4; i++ ) {  
+        checkBox = document.getElementById( "item"+i);  
+        if ( checkBox.checked ) {  
+        	location.href="matriculaaluno.do?aluno="+id+"&turma="+checkBox.value; 
+        }  
+    }  
+      
+
+	 alert( "Matriculado com sucesso" );  
+	
+}

@@ -13,10 +13,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.28-bin.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/itext-5.4.5/itextpdf-5.4.5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1-javadoc.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1-javadoc.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.faces-2.1.26.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/erivaldo/git/lapisearte/lapisearte/WebContent/WEB-INF/lib/itextpdf-5.4.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

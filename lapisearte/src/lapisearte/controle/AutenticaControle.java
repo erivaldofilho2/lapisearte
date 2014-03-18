@@ -49,7 +49,7 @@ public class AutenticaControle extends HttpServlet {
 			HttpSession sessao = request.getSession();
 			sessao.setMaxInactiveInterval(3000);
 			sessao.setAttribute("usuLogado", usuario);
-			response.sendRedirect("index.html");
+			response.sendRedirect("index.jsp");
 		}
 	}
 

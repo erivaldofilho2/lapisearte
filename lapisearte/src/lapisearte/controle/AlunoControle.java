@@ -1,7 +1,5 @@
 package lapisearte.controle;
 
-import java.awt.Dialog;
-import java.awt.FileDialog;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -75,22 +73,13 @@ public class AlunoControle extends HttpServlet {
 			saida.forward(request, response);
 
 		} else if (acao != null && acao.equals("decl")) {
-			// System.out.println("1");
-			// FileDialog salvararq = null;
-			// System.out.println("2");
-			// salvararq = new FileDialog(new Dialog(salvararq),
-			// "Salvando arquivo", FileDialog.SAVE);
-			// System.out.println("3");
-			// salvararq.setVisible(true);
-			// System.out.println("4");
-			// CriaPDF pdf = new CriaPDF();
-			// System.out.println("5");
-			// System.out.println(salvararq.getDirectory());
-			//
-			// pdf.criarDeclaracao(aluDao.buscaPorId(22),
-			// salvararq.getDirectory()
-			// + aluDao.buscaPorId(22).getNome());
-			// System.out.println("6");
+			
+			CriaPDF pdf = new CriaPDF();
+			
+			pdf.criarDeclaracao(aluDao.buscaPorId(Integer.parseInt(request.getParameter("id"))));
+
+			 
+			 
 		}
 	}
 

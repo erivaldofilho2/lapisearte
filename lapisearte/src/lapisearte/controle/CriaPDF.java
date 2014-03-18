@@ -1,6 +1,7 @@
 package lapisearte.controle;
 
 import java.io.FileOutputStream;
+
 import java.io.IOException;
 import java.sql.Date;
 import java.util.Calendar;
@@ -19,19 +20,19 @@ import com.itextpdf.text.pdf.PdfWriter;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
 
 public class CriaPDF {
-	
+
 	public CriaPDF(){
-		System.out.println("criou Criar PDF");
+
 	}
 	
-	public void criarDeclaracao(Aluno aluno,String diretorio) {
+	public Document criarDeclaracao(Aluno aluno) {
 		System.out.println("entrou na funcao");
 		Document pdf = new Document(PageSize.A4);
 		System.out.println("criou o pdf");
 		FileOutputStream os = null;
 		try {
 			
-			os = new FileOutputStream(diretorio+".pdf");
+			os = new FileOutputStream(aluno.getId()+".pdf");
 			System.out.println("Criou arquivo");
 			PdfWriter.getInstance(pdf, os);
 			pdf.open();
@@ -99,6 +100,7 @@ public class CriaPDF {
 				}
 			}
 		}
+		return pdf;
 
 	}
 

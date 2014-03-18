@@ -11,10 +11,12 @@ import javax.swing.JTextField;
 
 import lapisearte.DAO.AlunoDAO;
 import lapisearte.DAO.EnderecoDAO;
+import lapisearte.DAO.TurmaDAO;
 import lapisearte.DAO.UsuarioDAO;
 import lapisearte.controle.CriaPDF;
 import lapisearte.entidade.Aluno;
 import lapisearte.entidade.Endereco;
+import lapisearte.entidade.Turma;
 import lapisearte.entidade.Usuario;
 
 public class Testes {
@@ -32,7 +34,7 @@ public class Testes {
 //		System.out.println(dateFormat.format(data)); // Imprime 04/10/1988
 
 
-//
+
 		AlunoDAO aluDAO = new AlunoDAO();
 
 		ArrayList<Aluno> lista = aluDAO.buscaPorNome("Ju");
@@ -44,14 +46,14 @@ public class Testes {
 					+ aluno.getDataNascimento() + "\n\n");
 
 		}
-		FileDialog salvararq = null;
-		
-		salvararq = new FileDialog(new Dialog(salvararq),"Salvando arquivo",FileDialog.SAVE);
-		salvararq.setVisible(true);
-		
+//		FileDialog salvararq = null;
+//		
+//		salvararq = new FileDialog(new Dialog(salvararq),"Salvando arquivo",FileDialog.SAVE);
+//		salvararq.setVisible(true);
+//		
 		CriaPDF pdf = new CriaPDF();
 
-		pdf.criarDeclaracao(lista.get(2),salvararq.getDirectory()+lista.get(2).getNome());
+		pdf.criarDeclaracao(lista.get(2));
 
 //		Endereco endereco = new Endereco("Rua da minha casa",
 //				"Bairro da minha casa", 57061606, "Mcidade", "ME",
@@ -60,5 +62,12 @@ public class Testes {
 //				null);
 //		aluDAO.inserir(aluno);
 
+		//Turma turma = new Turma( 12, "5", "Z", "Professora", 2014);
+		
+		//TurmaDAO turDao =  new TurmaDAO();
+		//turDao.inserir(turma);
+		
+		
+		
 	}
 }

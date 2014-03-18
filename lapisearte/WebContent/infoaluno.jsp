@@ -19,10 +19,12 @@
 		<div class="centro">
 			<div class="menu_esquerda">
 		
-		<a href="#">Editar</a>
-		<a href="alunocontrole.do?acao=decl">Declaracao</a>
+		
+		<a href="matriculacontrole.do?aluno=<%=aluno.getId()%>">Matricular</a>
+		<a href="alunocontrole.do?acao=decl&id=<%=aluno.getId()%>">Declaracao</a>
 		<a href="#">Historico</a>
 		<a href="#">Ficha</a>
+		<a href="#">Editar</a>
 		<a href="#">Excluir</a>
 
 		</div>

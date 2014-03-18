@@ -8,12 +8,13 @@
 					<h1 class="titulo">Lapis e Arte</h1>
 					<h3 class="titulo2">sistema web</h3>
 				</div>
+				<div align="right"> <a href="autcontrole.do"><label class="titulo2">Sair  .</label></a></div>
 			</div>
 			<div class="menu">
 				<nav>
 				
 					<ul>
-						<li><a href="index.html">Home</a>
+						<li><a href="index.jsp">Home</a>
 						</li>
 					</ul>
 				
@@ -47,22 +48,6 @@
 								<li><a href="#">opcao 3</a>
 							
 							</ul>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="#">Matricula</a>
-							<ul>
-								<li><a href="#">opcao 1</a>
-								
-								<li><a href="#">opcao 2</a>
-								
-								<li><a href="#">opcao 3</a>
-							
-							</ul>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="autcontrole.do">Sair</a>
 						</li>
 					</ul>
 					</nav>
